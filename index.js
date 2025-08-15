@@ -24,10 +24,20 @@ main()
     console.log(err);
   });
 
-async function main() {
-  await mongoose.connect(process.env.MONGO_URL);
-  console.log("MongoDB connected ✅");
+async function startServer() {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log("MongoDB connected ✅");
+
+    app.listen(port, () => {
+      console.log(`Server Started at port ${port}`);
+    });
+  } catch (err) {
+    console.log(err);
+  }
 }
+startServer();
+
 
 // const userSchema = new mongoose.Schema({
 //   name: {
