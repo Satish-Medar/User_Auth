@@ -1,0 +1,57 @@
+<%-include("includes/navbar.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container mt-5 p-4 border rounded-4 signupForm">
+      <h3>Sign in or create account</h3>
+      <form method="post" action="/chats">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label fw-bold"
+            >Enter email</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="email"
+            required
+          />
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-warning rounded-4" type="submit">
+            Continue
+          </button>
+        </div>
+        <div id="emailHelp" class="form-text">
+          <b>By continuing, you agree to ChitChat's </b>
+          <u class="text-primary">Conditions of Use</u> and<u
+            class="text-primary"
+          >
+            Privacy Notice.</u
+          >
+        </div>
+        <hr />
+        <div>
+          <span class="fw-bold"> Buying for work? </span>
+        </div>
+        <span class="text-primary">
+          <a
+            class="link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            href="#"
+          >
+            Create a free business account
+          </a>
+        </span>
+      </form>
+    </div>
+    <hr />
+    <%-include("includes/footer.ejs") %>
+  </body>
+</html>

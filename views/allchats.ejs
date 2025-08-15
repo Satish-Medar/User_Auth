@@ -1,0 +1,26 @@
+<%-include("includes/navbar.ejs") %>
+<div class="container mt-5 pt-3">
+  <h1>All Chats</h1>
+  <form action="/" method="get">
+    <button type="submit" class="btn btn-primary">Back</button>
+  </form>
+  <br />
+  <!-- <form action="/chats/new" method="get">
+    <button type="submit" class="btn btn-primary">Create Chat</button>
+  </form> -->
+</div>
+<div class="container mt-5 p-4 border d-flex flex-wrap">
+  <div class="card text-bg-success m-3" style="max-width: 18rem">
+    <div class="card-header">From :</div>
+    <div class="card-header">To :</div>
+    <div class="card-body">
+      <h5 class="card-title">Message</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card’s content.
+      </p>
+    </div>
+    <div class="card-header">Created_at :</div>
+    <div class="card-header">Updated_at :</div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+body {
+  padding-top: 70px;
+}
+.signupForm {
+  width: 400px !important;
+  max-width: 400px !important;
+}
