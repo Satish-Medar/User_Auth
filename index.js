@@ -16,14 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-main()
-  .then((res) => {
-    console.log("Connection Successfull");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
+// ✅ ONLY ONE connect + ONLY ONE listen
 async function startServer() {
   try {
     await mongoose.connect(process.env.MONGO_URL);
@@ -36,6 +29,7 @@ async function startServer() {
     console.log(err);
   }
 }
+
 startServer();
 
 
